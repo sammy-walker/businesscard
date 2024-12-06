@@ -14,20 +14,20 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            padding: 20px; /* Prevent edges from being too close */
+            padding: 20px;
             box-sizing: border-box;
         }
 
         /* Card Styling */
         .business-card {
             width: 100%;
-            max-width: 400px; /* Limit card width for large screens */
+            max-width: 400px; /* Limit card width */
             background: linear-gradient(135deg, #ffffff, #f0f0f0); /* White-to-light grey gradient */
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow */
             padding: 20px;
             text-align: center;
-            box-sizing: border-box; /* Include padding in width */
+            box-sizing: border-box;
         }
 
         /* Name Styling */
@@ -49,16 +49,19 @@
             margin: 15px 0 20px; /* Spacing below job details */
         }
 
-        /* Profile Picture Styling */
-        .business-card img {
-            width: 120px; /* Restrict size for portrait design */
-            height: 120px;
-            object-fit: cover; /* Ensure proper cropping */
-            border-radius: 50%;
-            margin: 0 auto 15px auto; /* Center with space below */
-            display: block;
-            border: 3px solid #fff; /* White stroke */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+        /* Email Button Styling - Transparent Background with Black Text */
+        .email-button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: transparent; /* Transparent background */
+            color: black; /* Black text */
+            font-size: 14px;
+            font-weight: bold;
+            border: 2px solid black; /* Black border */
+            border-radius: 50px; /* Makes the button a pill */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
         }
 
         /* Contact Information */
@@ -72,29 +75,19 @@
             gap: 10px;
         }
 
-        /* Icons and Links */
-        .business-card p i {
-            font-size: 16px;
-            color: #ff6f61; /* Pastel red */
-        }
-
+        /* Link Styling */
         .business-card a {
             text-decoration: none;
-            color: #ff6f61; /* Match icon color */
+            color: #ff6f61; /* Match button color */
         }
 
         .business-card a:hover {
             color: #e5534b; /* Slightly darker pastel red on hover */
         }
     </style>
-    <!-- Add Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMgtwIO8T+G1/TkaOmmRu3/cM8nke39E7Z3Erdf" crossorigin="anonymous">
 </head>
 <body>
     <div class="business-card">
-        <!-- Profile Picture -->
-        <img src="images/headshot.jpg" alt="Profile Picture">
-        
         <!-- Name -->
         <h1>Sammy Walker</h1>
         
@@ -104,9 +97,17 @@
         </div>
         
         <!-- Contact Information -->
-        <p><i class="fas fa-envelope"></i> <a href="mailto:sammy@amcocommercial.co.uk">sammy@amcocommercial.co.uk</a></p>
-        <p><i class="fas fa-phone"></i> <a href="tel:01617733978">01617733978</a></p>
-        <p><i class="fas fa-globe"></i> <a href="https://www.amcomanagement.co.uk/" target="_blank">amcomanagement.com</a></p>
+        <p>
+            <a href="mailto:sammy@amcocommercial.co.uk" class="email-button">Email</a>
+        </p>
+        <p>
+            <i class="fas fa-phone"></i> 
+            <a href="tel:01617733978">01617733978</a> (Ext: 502)
+        </p>
+        <p>
+            <i class="fas fa-globe"></i> 
+            <a href="https://www.amcomanagement.co.uk/" target="_blank">amcomanagement.com</a>
+        </p>
     </div>
 </body>
 </html>
