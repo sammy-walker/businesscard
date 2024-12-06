@@ -14,28 +14,20 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            padding: 20px; /* Prevent edges from being too close */
+            box-sizing: border-box;
         }
 
         /* Card Styling */
         .business-card {
-            width: 90%; /* Responsive width for smaller screens */
-            max-width: 400px; /* Limit card width on larger screens */
+            width: 100%;
+            max-width: 400px; /* Limit card width for large screens */
             background: linear-gradient(135deg, #ffffff, #f0f0f0); /* White-to-light grey gradient */
             border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow */
             padding: 20px;
             text-align: center;
-        }
-
-        /* Profile Picture Styling */
-        .business-card img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover; /* Prevent stretching */
-            border-radius: 50%; /* Circle */
-            border: 4px solid #ffffff; /* White stroke */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-            margin-bottom: 15px;
+            box-sizing: border-box; /* Include padding in width */
         }
 
         /* Name Styling */
@@ -45,7 +37,7 @@
             color: #333;
         }
 
-        /* Position and Workplace Styling */
+        /* Job Details Styling */
         .details {
             display: flex;
             justify-content: center;
@@ -54,27 +46,38 @@
             font-size: 14px;
             color: #000; /* Black text */
             font-weight: bold; /* Bold font */
-            margin: 15px 0 20px; /* Space between job and next section */
+            margin: 15px 0 20px; /* Spacing below job details */
         }
 
-        /* Icons and Info Styling */
+        /* Profile Picture Styling */
+        .business-card img {
+            width: 120px; /* Restrict size for portrait design */
+            height: 120px;
+            object-fit: cover; /* Ensure proper cropping */
+            border-radius: 50%;
+            margin: 0 auto 15px auto; /* Center with space below */
+            display: block;
+            border: 3px solid #fff; /* White stroke */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+        }
+
+        /* Contact Information */
         .business-card p {
             font-size: 14px;
             color: #555;
             margin: 10px 0;
             display: flex;
             align-items: center;
-            justify-content: center; /* Center-align content */
+            justify-content: center;
             gap: 10px;
         }
 
-        /* Icon Styling */
+        /* Icons and Links */
         .business-card p i {
             font-size: 16px;
             color: #ff6f61; /* Pastel red */
         }
 
-        /* Link Styling */
         .business-card a {
             text-decoration: none;
             color: #ff6f61; /* Match icon color */
@@ -90,7 +93,7 @@
 <body>
     <div class="business-card">
         <!-- Profile Picture -->
-        <img src="headshot.jpg" alt="Profile Picture">
+        <img src="images/headshot.jpg" alt="Profile Picture">
         
         <!-- Name -->
         <h1>Sammy Walker</h1>
@@ -102,7 +105,7 @@
         
         <!-- Contact Information -->
         <p><i class="fas fa-envelope"></i> <a href="mailto:sammy@amcocommercial.co.uk">sammy@amcocommercial.co.uk</a></p>
-        <p><i class="fas fa-phone"></i> <a href="tel:01617733978">0161 773 3978</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:01617733978">01617733978</a></p>
         <p><i class="fas fa-globe"></i> <a href="https://www.amcomanagement.co.uk/" target="_blank">amcomanagement.com</a></p>
     </div>
 </body>
